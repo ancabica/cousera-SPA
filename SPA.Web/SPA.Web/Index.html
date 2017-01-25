@@ -1,11 +1,26 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app='MsgApp'>
 <head>
-    <base href="/" />
-    <title>SPA with AngularJS</title>
-    
+    <meta charset="utf-8">
+    <script src="app/assets/js/angular.min.js"></script>
+    <script src="app/assets/js/app.js"></script>
+    <style>
+        body {
+            font-size: 1.2em;
+        }
+    </style>
+    <title>Expressions and Interpolation</title>
 </head>
 <body>
-    SPA with Angular JS
+    <h1>Expressions and Interpolation</h1>
+    <div ng-controller='MsgController'>
+        {{name}} has a message for you: <br>
+        {{sayMessage()}}
+        <div>
+            <button ng-click="feedYaakov()">Feed Yaakov</button>
+            <br>
+            <img ng-src="app/assets/images/yaakov_{{stateOfBeing}}.png">
+        </div>
+    </div>
 </body>
 </html>
